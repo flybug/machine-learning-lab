@@ -17,9 +17,11 @@ class LogisticRegression(Regression):
         return self.sigmoid(z)
 
 
-    def compute_cost(self, w: float, b: float, lambda_: float):
+    def compute_cost(self, w_in: float, b_in: float, lambda_: float):
         x = self.X_train
         y = self.y_train
+        w = w_in
+        b = b_in
         m = x.shape[0]
         cost_sum = 0
         for i in range(m):
@@ -32,9 +34,11 @@ class LogisticRegression(Regression):
         cost = cost_without_reg + (lambda_ / (2 * m)) * reg_cost
         return cost
 
-    def compute_gradient(self, w: NDArray, b: float):
+    def compute_gradient(self, w_in: NDArray, b_in: float):
         x = self.X_train
         y = self.y_train
+        w = w_in
+        b = b_in
         m, n = x.shape
         dj_dw = np.zeros(w.shape)
         dj_db = 0.

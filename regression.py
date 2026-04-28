@@ -13,7 +13,7 @@ class Regression:
         pass
 
     @abstractmethod
-    def compute_cost(self, w: NDArray, b: float, lambda_: float):
+    def compute_cost(self, w_in: NDArray, b_in: float, lambda_: float):
         pass
 
     @abstractmethod
