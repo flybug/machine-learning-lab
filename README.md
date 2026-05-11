@@ -10,5 +10,5 @@ uv pip install jupyter numpy pandas matplotlib scikit-learn torchinfo
 
 Apple Silicom
 ```bash
-uv pip install jupyter numpy pandas matplotlib scikit-learn torch torchvision torchinfo 
+uv pip install jupyter numpy pandas matplotlib scikit-learn torch torchvision torchinfo tabulate
 ```
